@@ -8,7 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 interface ProjectSidebarProps {
   isOpen: boolean
   onClose: () => void
-  onNewProject: () => void
+  onNewProject?: () => void
 }
 
 interface EmptyProjectsProps {
