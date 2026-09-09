@@ -58,3 +58,9 @@ Progress state must reflect the actual state of the implementation, not the inte
 1. The current unit works end to end within its defined scope.
 2. No invariant defined in `architecture-context.md` was violated.
 3. `progress-tracker.md` reflects the completed work.
+
+## Execution Rules
+- Before making any code changes, output a clear, numbered plan of action.
+- State your assumptions, target files, and potential edge cases explicitly.
+- Prefer small, targeted diffs over rewriting entire files.
+- Verify changes using local tests, type-checks, or linters before finishing.
