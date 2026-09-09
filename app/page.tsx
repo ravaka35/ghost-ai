@@ -1,11 +1,8 @@
-import { EditorLayout } from "@/components/editor/editor-layout"
+import { auth } from "@clerk/nextjs/server"
+import { redirect } from "next/navigation"
 
-export default function Home() {
-  return (
-    <EditorLayout>
-      <div className="flex h-full items-center justify-center">
-        <p className="text-sm text-copy-muted">Editor canvas</p>
-      </div>
-    </EditorLayout>
-  )
+export default async function Home() {
+  const { userId } = await auth()
+
+  redirect(userId ? "/editor" : process.env.NEXT_PUBLIC_CLERK_SIGN_IN_URL!)
 }
